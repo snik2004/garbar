@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_corner_bg_item"
+    android:elevation="10dp">
+
+    <ImageView
+        android:id="@+id/mini_poster"
+        android:layout_width="40dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="63dp"
+        tools:layout_width="40dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/name_film"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/genre"
+        app:layout_constraintStart_toEndOf="@+id/mini_poster"
+        app:layout_constraintTop_toTopOf="@+id/mini_poster"
+        tools:text="Терминатор: судный день" />
+
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_transparent_60"
+        app:layout_constraintBottom_toBottomOf="@+id/mini_poster"
+        app:layout_constraintStart_toStartOf="@+id/name_film"
+        app:layout_constraintTop_toBottomOf="@+id/name_film"
+        tools:text="Документальный" />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#99000000"
+        app:layout_constraintBottom_toBottomOf="@+id/genre"
+        app:layout_constraintStart_toEndOf="@+id/genre"
+        app:layout_constraintTop_toTopOf="@+id/genre"
+        tools:text="2025" />
+
+    <ImageView
+        android:id="@+id/favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:src="@drawable/ic_star"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/name_film"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name_film"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
